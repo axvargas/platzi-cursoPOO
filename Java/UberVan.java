@@ -3,7 +3,7 @@
  * Created Date: Friday July 30th 2021 5:54:07 pm
  * Author: Andrés X. Vargas
  * -----
- * Last Modified: Friday July 30th 2021 5:54:31 pm
+ * Last Modified: Sunday August 1st 2021 10:32:45 am
  * Modified By: the developer known as Andrés X. Vargas at <axvargas@fiec.espol.edu.ec>
  * -----
  * Copyright (c) 2021 MattuApps
@@ -20,5 +20,18 @@ class UberVan extends Car {
         super(license, driver);
         this.typeCarAccepted = typeCarAccepted;
         this.seatsMaterial = seatsMaterial;
+    }
+
+    public UberVan(String license, Account driver) {
+        super(license, driver);
+    }
+
+    @Override
+    public void setPassengers(Integer passengers) {
+        if(passengers == 6){
+            this.passengers = passengers;
+        }else{
+            System.out.println("You must assign 6 passengers");
+        }
     }
 }
